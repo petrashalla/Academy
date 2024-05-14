@@ -1,0 +1,1 @@
+new Swiper(".swiper",{slidesPerView:3,spaceBetween:30,scrollbar:{el:".swiper-scrollbar",clickable:!0}});
