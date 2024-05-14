@@ -1,0 +1,83 @@
+.license {
+    margin-bottom: 120px;
+
+    &__contant {
+        display: flex;
+        gap: 75px;
+    }
+
+    &__img {
+        margin-bottom: 12px;
+    }
+
+    &__file-download {
+        font-weight: 300;
+        font-size: 18px;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: var(--dark);
+        padding-left: 11px;
+
+    }
+
+    &__file-span {
+        font-weight: 400;
+        font-size: 16px;
+        color: #999;
+        padding-left: 11px;
+        text-decoration: none;
+    }
+
+    &__left {
+        width: 60%;
+        font-size: 20px;
+        line-height: 140%;
+    }
+
+    &__title {
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-weight: 300;
+        margin-bottom: 40px;
+    }
+
+    &__item {
+        &::before{
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            background-color: var(--dark);
+            border-radius: 50%;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+    }
+}
+
+.license__file-download[download]::before {
+    content: url(./../../img/pdf-download.svg);
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+
+
+@media (max-width: 880px) {
+    .license {
+        margin-bottom: 120px;
+    
+        &__contant {
+            flex-direction: column-reverse;
+            gap: 20px;
+            align-items: center;
+        }
+
+        &__left {
+            width: 100%
+        }
+    }
+}

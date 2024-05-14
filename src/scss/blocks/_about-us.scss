@@ -1,0 +1,107 @@
+.menu-top {
+
+    &__list {
+        display: inline-block;
+        margin-top: 40px;
+    }
+
+    &__link-item {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: #878787;
+    }
+
+    &__link {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--blue);
+        margin-right: 18px;
+
+        position: relative;
+
+            &::after {
+                content: "/";
+                cursor: default;
+                position: absolute;
+                right: -14px;
+                top: 0px;
+            }
+    }
+}
+
+
+.about-us {
+    margin-bottom: 60px;
+    background-image: url("./../../img/bacground.jpg");
+
+    &__title {
+        margin-top: 69px;
+    }
+
+    &__body {
+        display: flex;
+        gap: 72px;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-top: 70px;
+        padding-bottom: 60px;
+    }
+
+    &__nav {
+        min-width: 330px;
+    }
+
+    &__item {
+        margin-top: 26px;
+    }
+
+    &__link{
+        font-family: var(--font-family);
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 156%;
+        color: var(--dark);    
+        
+        &::after{
+            content: url('../../img/Arrow.svg');
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        &:focus::after {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__img {
+        border-radius: 10px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(31, 37, 51, 0) 44.5%);
+    }
+}
+
+
+@media (max-width: 980px) {
+    .about-us {
+        &__title {
+            margin-top: 40px;
+        }
+    
+        &__body {
+            flex-direction: column-reverse;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        &__item {
+            margin-top: 16px;
+        }    
+    }
+}
+
+
